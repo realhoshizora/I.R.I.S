@@ -26,20 +26,31 @@ function setTracks(src, tgt) {
 }
 
 async function fit() {
+  cues.style.maxHeight = "";
   await new Promise(requestAnimationFrame);
-  await invoke("fit_popup", { height: Math.ceil(document.querySelector(".frame").getBoundingClientRect().height) });
+  const want = Math.ceil(document.querySelector(".frame").getBoundingClientRect().height);
+  const given = await invoke("fit_popup", { height: want });
+  // No room for the whole result on either side of the selection: scroll inside the band instead.
+  if (given < want) cues.style.maxHeight = Math.max(48, cues.getBoundingClientRect().height - (want - given)) + "px";
+}
+
+function setActions(copyable, pinnable) {
+  $("copy").disabled = !copyable;
+  $("pin").disabled = !pinnable;
 }
 
 function renderLoading(text) {
   setTracks("auto", target);
   $("engine").textContent = "";
   copyValue = "";
+  setActions(false, true);
   const lang = /[\u3040-\u30ff\u3400-\u9fff]/.test(text) ? "ja" : null;
   cues.replaceChildren(el("p", { class: "src", lang }, text), el("p", { class: "tl pending" }, "Đang dịch…"));
 }
 
 function renderError(message, canRetry) {
   copyValue = "";
+  setActions(false, canRetry);
   const nodes = [el("p", { class: "err", role: "alert" }, message)];
   if (canRetry) {
     const b = el("button", { class: "retry", type: "button" }, "Thử lại");
@@ -61,9 +72,11 @@ function renderResult(t) {
     for (const d of t.dict) dl.append(el("dt", {}, d.pos || "Nghĩa"), el("dd", { lang: t.tgt_lang }, d.terms.join(", ")));
     cues.replaceChildren(head, dl);
     copyValue = t.dict.map((d) => `${d.pos}: ${d.terms.join(", ")}`).join("\n");
+    setActions(true, true);
   } else {
     cues.replaceChildren(el("p", { class: "src", lang: t.src_lang }, t.source), el("p", { class: "tl", lang: t.tgt_lang }, t.text));
     copyValue = t.text;
+    setActions(true, true);
   }
 }
 

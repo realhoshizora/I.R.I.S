@@ -44,6 +44,7 @@ body { font-family: var(--font); font-size: 14px; line-height: 1.5; color: var(-
 .icon-btn { width: 28px; height: 28px; display: grid; place-items: center; border: 0; border-radius: 5px; background: transparent; color: var(--ink-3); cursor: pointer; padding: 0; }
 .icon-btn:hover { color: var(--ink); background: rgba(255, 255, 255, 0.07); }
 .icon-btn[aria-pressed="true"] { color: var(--sub); }
+.icon-btn:disabled { color: var(--ink-3); opacity: 0.35; background: transparent; cursor: default; }
 .icon-btn svg { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
 
 .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }

@@ -84,6 +84,7 @@ fn cursor_anchor(x: i32, y: i32) -> Rect {
 
 /// Covers every line of the last mouse selection when the cursor is still at its end,
 /// so a selection dragged upwards does not get the popup over its lower lines.
+/// Keyboard selections fall back to the text caret, then to the mouse cursor.
 // shortcut: keyboard selections only know the cursor position; upgrade with UI Automation TextPattern bounds if that matters.
 fn selection_anchor(app: &AppHandle, x: i32, y: i32) -> Rect {
     if let Some(((a, b), at)) = *app.state::<AppState>().last_selection.lock().unwrap() {
@@ -92,7 +93,10 @@ fn selection_anchor(app: &AppHandle, x: i32, y: i32) -> Rect {
             return Rect { x: a.0.min(b.0) - 24, y: top - 18, h: (a.1 - b.1).abs() + 44 };
         }
     }
-    cursor_anchor(x, y)
+    match win::caret() {
+        Some((cx, cy, ch)) => Rect { x: cx - 24, y: cy - 4, h: ch + 8 },
+        None => cursor_anchor(x, y),
+    }
 }
 
 fn translate_selection(app: AppHandle, anchor: Rect) {
@@ -154,29 +158,40 @@ async fn translate(text: String, state: State<'_, AppState>) -> Result<translate
     translate::translate(&state.http, &text, &s.target_lang, ai).await
 }
 
-/// Places the popup below the anchor (above it when there is no room) and shows it.
+/// Places the popup below the anchor, or above it when there is no room, and shows it.
+/// Returns the height (logical px) it was given, which is less than asked when neither side fits.
 #[tauri::command]
-fn fit_popup(app: AppHandle, height: f64, state: State<'_, AppState>) {
-    let Some(popup) = app.get_webview_window("popup") else { return };
+fn fit_popup(app: AppHandle, height: f64, state: State<'_, AppState>) -> f64 {
+    let Some(popup) = app.get_webview_window("popup") else { return height };
     let a = *state.anchor.lock().unwrap();
-    let Ok(Some(mon)) = popup.monitor_from_point(a.x as f64, a.y as f64).or_else(|_| popup.primary_monitor()) else { return };
+    let Ok(Some(mon)) = popup.monitor_from_point(a.x as f64, a.y as f64).or_else(|_| popup.primary_monitor()) else { return height };
     let s = mon.scale_factor();
     let area = mon.work_area();
     let (left, top) = (area.position.x, area.position.y);
     let (right, bottom) = (left + area.size.width as i32, top + area.size.height as i32);
-    let (w, h) = ((POPUP_WIDTH * s) as i32, (height * s).ceil() as i32);
+    let (w, want) = ((POPUP_WIDTH * s) as i32, (height * s).ceil() as i32);
     let gap = (4.0 * s) as i32;
+    let below = bottom - (a.y + a.h + gap);
+    let above = a.y - gap - top;
+    // Stay off the selection: take the side where it fits, else the roomier side and let the text scroll.
+    let min = (120.0 * s) as i32;
+    let (y, h) = if want <= below || (want > above && below >= above) {
+        let h = want.min(below.max(min));
+        (a.y + a.h + gap, h)
+    } else {
+        let h = want.min(above.max(min));
+        ((a.y - gap - h).max(top), h)
+    };
+    // shortcut: a selection taller than the whole screen leaves no free side, so the popup clamps onto it.
+    let y = y.min(bottom - h).max(top);
     let x = a.x.min(right - w).max(left);
-    let mut y = a.y + a.h + gap;
-    if y + h > bottom {
-        y = (a.y - h - gap).max(top);
-    }
     let _ = popup.set_size(PhysicalSize::new(w as u32, h as u32));
     let _ = popup.set_position(PhysicalPosition::new(x, y));
     if !popup.is_visible().unwrap_or(false) {
         let _ = popup.show();
         let _ = popup.set_focus();
     }
+    h as f64 / s
 }
 
 #[tauri::command]

@@ -12,6 +12,7 @@ use windows::Graphics::Imaging::{BitmapPixelFormat, SoftwareBitmap};
 use windows::Media::Ocr::OcrEngine;
 use windows::Storage::Streams::DataWriter;
 use windows::Win32::Foundation::{HWND, LPARAM, LRESULT, POINT, WPARAM};
+use windows::Win32::Graphics::Gdi::ClientToScreen;
 use windows::Win32::System::Threading::GetCurrentProcessId;
 use windows::Win32::UI::Input::KeyboardAndMouse::*;
 use windows::Win32::UI::WindowsAndMessaging::*;
@@ -25,6 +26,23 @@ pub fn cursor_pos() -> (i32, i32) {
         let _ = GetCursorPos(&mut p);
     }
     (p.x, p.y)
+}
+
+/// Screen position (x, y, height) of the focused app's text caret, when it exposes one.
+pub fn caret() -> Option<(i32, i32, i32)> {
+    unsafe {
+        let mut gi = GUITHREADINFO { cbSize: size_of::<GUITHREADINFO>() as u32, ..Default::default() };
+        GetGUIThreadInfo(0, &mut gi).ok()?;
+        let r = gi.rcCaret;
+        if gi.hwndCaret.is_invalid() || r.bottom <= r.top {
+            return None;
+        }
+        let mut p = POINT { x: r.left, y: r.top };
+        if !ClientToScreen(gi.hwndCaret, &mut p).as_bool() {
+            return None;
+        }
+        Some((p.x, p.y, r.bottom - r.top))
+    }
 }
 
 pub fn foreground() -> isize {
