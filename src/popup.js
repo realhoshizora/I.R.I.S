@@ -32,7 +32,14 @@ async function fit() {
   const given = await invoke("fit_popup", { height: want });
   // No room for the whole result on either side of the selection: scroll inside the band instead.
   if (given < want) cues.style.maxHeight = Math.max(48, cues.getBoundingClientRect().height - (want - given)) + "px";
+  markOverflow();
 }
+
+// Fade the bottom edge while more text sits below the fold.
+function markOverflow() {
+  cues.classList.toggle("more", cues.scrollTop + cues.clientHeight < cues.scrollHeight - 2);
+}
+cues.addEventListener("scroll", markOverflow);
 
 function setActions(copyable, pinnable) {
   $("copy").disabled = !copyable;
