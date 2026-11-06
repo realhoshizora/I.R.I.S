@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<title>I.R.I.S · Nút dịch</title>
+<link rel="stylesheet" href="app.css">
+<style>
+  html, body { background: transparent; overflow: hidden; height: 100%; }
+  body { display: grid; place-items: center; }
+  .fab { width: 34px; height: 34px; display: grid; place-items: center; background: var(--band); border: 0; border-radius: 6px; padding: 0; cursor: pointer; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35); animation: pop 0.18s var(--ease-out) both; }
+  .fab:hover .track { filter: brightness(1.1); }
+  @keyframes pop { from { opacity: 0; transform: scale(0.85); } to { opacity: 1; transform: none; } }
+</style>
+</head>
+<body>
+  <button class="fab" id="fab" type="button" aria-label="Dịch chữ vừa bôi đen" title="Dịch chữ vừa bôi đen (Ctrl+Alt+D)"><span class="track" id="lang" data-lang="vi">VI</span></button>
+<script src="fab.js"></script>
+</body>
+</html>

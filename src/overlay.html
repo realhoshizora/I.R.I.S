@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<title>I.R.I.S · Khoanh vùng</title>
+<link rel="stylesheet" href="app.css">
+<style>
+  html, body { height: 100%; overflow: hidden; }
+  body { background: rgba(6, 8, 12, 0.42); cursor: crosshair; user-select: none; }
+  body.dragging { background: transparent; }
+  .hint { position: fixed; z-index: 1; top: 28px; left: 50%; transform: translateX(-50%); background: var(--band); color: var(--sub); font-size: 15px; font-weight: 600; padding: 8px 16px; border-radius: 6px; text-shadow: 0 1px 0 #000; box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35); white-space: nowrap; pointer-events: none; }
+  .hint span { color: var(--ink-2); font-weight: 400; }
+  .box { position: fixed; border: 2px solid var(--sub); border-radius: 2px; box-shadow: 0 0 0 200vmax rgba(6, 8, 12, 0.42); pointer-events: none; }
+</style>
+</head>
+<body>
+  <div class="hint" role="status">Kéo chuột quanh đoạn chữ cần dịch <span>· Esc để hủy</span></div>
+  <div class="box" id="box" hidden></div>
+<script src="overlay.js"></script>
+</body>
+</html>

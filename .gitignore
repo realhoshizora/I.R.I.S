@@ -1,0 +1,7 @@
+node_modules/
+src-tauri/target/
+src-tauri/gen/
+.impeccable/questions/
+.impeccable/mocks/
+.impeccable/review/
+.impeccable/hook.cache.json

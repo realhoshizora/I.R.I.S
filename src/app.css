@@ -1,0 +1,51 @@
+@font-face { font-family: "Be Vietnam Pro"; font-weight: 400; font-display: swap; src: url(fonts/be-vietnam-pro-vietnamese-400-normal.woff2) format("woff2"); unicode-range: U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB; }
+@font-face { font-family: "Be Vietnam Pro"; font-weight: 600; font-display: swap; src: url(fonts/be-vietnam-pro-vietnamese-600-normal.woff2) format("woff2"); unicode-range: U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB; }
+@font-face { font-family: "Be Vietnam Pro"; font-weight: 700; font-display: swap; src: url(fonts/be-vietnam-pro-vietnamese-700-normal.woff2) format("woff2"); unicode-range: U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB; }
+@font-face { font-family: "Be Vietnam Pro"; font-weight: 400; font-display: swap; src: url(fonts/be-vietnam-pro-latin-400-normal.woff2) format("woff2"); unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+@font-face { font-family: "Be Vietnam Pro"; font-weight: 600; font-display: swap; src: url(fonts/be-vietnam-pro-latin-600-normal.woff2) format("woff2"); unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+@font-face { font-family: "Be Vietnam Pro"; font-weight: 700; font-display: swap; src: url(fonts/be-vietnam-pro-latin-700-normal.woff2) format("woff2"); unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+
+/* Subtitle band: one opaque near-black band, source in dim white, translation in subtitle yellow, languages as coloured tracks. */
+:root {
+  --band: #0e1116;
+  --band-raised: #171b22;
+  --line: #2a313c;
+  --ink: #ffffff;
+  --ink-2: rgba(255, 255, 255, 0.78);
+  --ink-3: #8f98a3;
+  --sub: #f7d44c;
+  --track-ja: #ef6a4c;
+  --track-en: #6cb4ff;
+  --track-vi: #f7d44c;
+  --track-other: #a3acb7;
+  --err: #ff9b8a;
+  --font: "Be Vietnam Pro", "Segoe UI", system-ui, sans-serif;
+  --font-jp: "Yu Gothic UI", "Meiryo UI", "Meiryo", "Be Vietnam Pro", sans-serif;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body { font-family: var(--font); font-size: 14px; line-height: 1.5; color: var(--ink); -webkit-font-smoothing: antialiased; }
+:lang(ja) { font-family: var(--font-jp); }
+::selection { background: rgba(247, 212, 76, 0.35); color: var(--ink); }
+:focus-visible { outline: 2px solid var(--sub); outline-offset: 2px; }
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-thumb { background: #39414d; border-radius: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+
+/* Language track chip: the signature of the world. */
+.track { display: inline-block; min-width: 26px; text-align: center; font: 600 11px/1 var(--font); letter-spacing: 0.06em; padding: 4px 6px; border-radius: 3px; color: #111418; background: var(--track-other); }
+.track[data-lang="ja"] { background: var(--track-ja); }
+.track[data-lang="en"] { background: var(--track-en); }
+.track[data-lang="vi"] { background: var(--track-vi); }
+
+.icon-btn { width: 28px; height: 28px; display: grid; place-items: center; border: 0; border-radius: 5px; background: transparent; color: var(--ink-3); cursor: pointer; padding: 0; }
+.icon-btn:hover { color: var(--ink); background: rgba(255, 255, 255, 0.07); }
+.icon-btn[aria-pressed="true"] { color: var(--sub); }
+.icon-btn svg { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+
+.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
