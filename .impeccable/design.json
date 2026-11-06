@@ -1,0 +1,386 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-06T08:10:00Z",
+  "title": "Design System: I.R.I.S",
+  "extensions": {
+    "colorMeta": {
+      "band": {
+        "role": "neutral",
+        "displayName": "Subtitle Band",
+        "canonical": "oklch(17.7% 0.011 261)",
+        "tonalRamp": [
+          "oklch(15% 0.003 261)",
+          "oklch(26% 0.007 261)",
+          "oklch(37% 0.011 261)",
+          "oklch(48% 0.011 261)",
+          "oklch(59% 0.011 261)",
+          "oklch(70% 0.011 261)",
+          "oklch(82% 0.008 261)",
+          "oklch(95% 0.003 261)"
+        ]
+      },
+      "band-raised": {
+        "role": "neutral",
+        "displayName": "Raised Band",
+        "canonical": "oklch(22.1% 0.015 262)",
+        "tonalRamp": [
+          "oklch(15% 0.004 262)",
+          "oklch(26% 0.010 262)",
+          "oklch(37% 0.015 262)",
+          "oklch(48% 0.015 262)",
+          "oklch(59% 0.015 262)",
+          "oklch(70% 0.015 262)",
+          "oklch(82% 0.011 262)",
+          "oklch(95% 0.004 262)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "oklch(31.1% 0.022 259)",
+        "tonalRamp": [
+          "oklch(15% 0.006 259)",
+          "oklch(26% 0.014 259)",
+          "oklch(37% 0.022 259)",
+          "oklch(48% 0.022 259)",
+          "oklch(59% 0.022 259)",
+          "oklch(70% 0.022 259)",
+          "oklch(82% 0.016 259)",
+          "oklch(95% 0.006 259)"
+        ]
+      },
+      "line-hover": {
+        "role": "neutral",
+        "displayName": "Hairline Hover"
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "White Ink"
+      },
+      "ink-2": {
+        "role": "neutral",
+        "displayName": "Dim Ink"
+      },
+      "ink-3": {
+        "role": "neutral",
+        "displayName": "Muted Ink",
+        "canonical": "oklch(67.6% 0.019 253)",
+        "tonalRamp": [
+          "oklch(15% 0.005 253)",
+          "oklch(26% 0.012 253)",
+          "oklch(37% 0.019 253)",
+          "oklch(48% 0.019 253)",
+          "oklch(59% 0.019 253)",
+          "oklch(70% 0.019 253)",
+          "oklch(82% 0.014 253)",
+          "oklch(95% 0.005 253)"
+        ]
+      },
+      "subtitle-yellow": {
+        "role": "primary",
+        "displayName": "Subtitle Yellow",
+        "canonical": "oklch(87.6% 0.154 94)",
+        "tonalRamp": [
+          "oklch(15% 0.038 94)",
+          "oklch(26% 0.098 94)",
+          "oklch(37% 0.154 94)",
+          "oklch(48% 0.154 94)",
+          "oklch(59% 0.154 94)",
+          "oklch(70% 0.154 94)",
+          "oklch(82% 0.111 94)",
+          "oklch(95% 0.038 94)"
+        ]
+      },
+      "track-ja": {
+        "role": "tertiary",
+        "displayName": "Vermilion Track",
+        "canonical": "oklch(68.2% 0.171 34)",
+        "tonalRamp": [
+          "oklch(15% 0.043 34)",
+          "oklch(26% 0.109 34)",
+          "oklch(37% 0.171 34)",
+          "oklch(48% 0.171 34)",
+          "oklch(59% 0.171 34)",
+          "oklch(70% 0.171 34)",
+          "oklch(82% 0.123 34)",
+          "oklch(95% 0.043 34)"
+        ]
+      },
+      "track-en": {
+        "role": "tertiary",
+        "displayName": "Broadcast Blue Track",
+        "canonical": "oklch(75.4% 0.131 251)",
+        "tonalRamp": [
+          "oklch(15% 0.033 251)",
+          "oklch(26% 0.084 251)",
+          "oklch(37% 0.131 251)",
+          "oklch(48% 0.131 251)",
+          "oklch(59% 0.131 251)",
+          "oklch(70% 0.131 251)",
+          "oklch(82% 0.094 251)",
+          "oklch(95% 0.033 251)"
+        ]
+      },
+      "track-vi": {
+        "role": "tertiary",
+        "displayName": "Yellow Track",
+        "canonical": "oklch(87.6% 0.154 94)",
+        "tonalRamp": [
+          "oklch(15% 0.038 94)",
+          "oklch(26% 0.098 94)",
+          "oklch(37% 0.154 94)",
+          "oklch(48% 0.154 94)",
+          "oklch(59% 0.154 94)",
+          "oklch(70% 0.154 94)",
+          "oklch(82% 0.111 94)",
+          "oklch(95% 0.038 94)"
+        ]
+      },
+      "track-other": {
+        "role": "tertiary",
+        "displayName": "Unknown Track Grey",
+        "canonical": "oklch(74.1% 0.019 253)",
+        "tonalRamp": [
+          "oklch(15% 0.005 253)",
+          "oklch(26% 0.012 253)",
+          "oklch(37% 0.019 253)",
+          "oklch(48% 0.019 253)",
+          "oklch(59% 0.019 253)",
+          "oklch(70% 0.019 253)",
+          "oklch(82% 0.014 253)",
+          "oklch(95% 0.005 253)"
+        ]
+      },
+      "chip-ink": {
+        "role": "neutral",
+        "displayName": "Chip Ink",
+        "canonical": "oklch(19.0% 0.009 256)",
+        "tonalRamp": [
+          "oklch(15% 0.002 256)",
+          "oklch(26% 0.006 256)",
+          "oklch(37% 0.009 256)",
+          "oklch(48% 0.009 256)",
+          "oklch(59% 0.009 256)",
+          "oklch(70% 0.009 256)",
+          "oklch(82% 0.007 256)",
+          "oklch(95% 0.002 256)"
+        ]
+      },
+      "err": {
+        "role": "error",
+        "displayName": "Soft Coral",
+        "canonical": "oklch(78.8% 0.123 30)",
+        "tonalRamp": [
+          "oklch(15% 0.031 30)",
+          "oklch(26% 0.079 30)",
+          "oklch(37% 0.123 30)",
+          "oklch(48% 0.123 30)",
+          "oklch(59% 0.123 30)",
+          "oklch(70% 0.123 30)",
+          "oklch(82% 0.089 30)",
+          "oklch(95% 0.031 30)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "headword": {
+        "displayName": "Headword",
+        "purpose": "Looked-up word in a dictionary result."
+      },
+      "subtitle": {
+        "displayName": "Subtitle",
+        "purpose": "The translation line, yellow with outline shadow."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Settings window title."
+      },
+      "meaning": {
+        "displayName": "Meaning",
+        "purpose": "Dictionary meanings in yellow; region hint."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Source line, form values, default text."
+      },
+      "body-ja": {
+        "displayName": "Body (Japanese)",
+        "purpose": "Japanese runs via :lang(ja)."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Form labels, buttons, kbd."
+      },
+      "caps-label": {
+        "displayName": "Caps Label",
+        "purpose": "Part-of-speech labels, uppercase, muted."
+      },
+      "track": {
+        "displayName": "Track",
+        "purpose": "Track chip text."
+      }
+    },
+    "shadows": [
+      {
+        "name": "popup-band",
+        "value": "0 8px 24px rgba(0,0,0,0.38), 0 1px 3px rgba(0,0,0,0.3)",
+        "purpose": "Translation popup band."
+      },
+      {
+        "name": "floating-hint",
+        "value": "0 6px 18px rgba(0,0,0,0.35)",
+        "purpose": "Region-select instruction."
+      },
+      {
+        "name": "selection-button",
+        "value": "0 4px 12px rgba(0,0,0,0.35)",
+        "purpose": "Small translate button."
+      },
+      {
+        "name": "subtitle-outline",
+        "value": "text-shadow: 0 1px 0 #000, 0 0 2px #000",
+        "purpose": "Hairline outline on translation text."
+      },
+      {
+        "name": "region-scrim",
+        "value": "0 0 0 200vmax rgba(6,8,12,0.42)",
+        "purpose": "Dims everything outside the drawn region box."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "All entrances."
+      },
+      {
+        "name": "cue-reveal",
+        "value": "0.32s ease-out, from opacity 0.2 / translateY(3px), 80ms stagger",
+        "purpose": "Result lines enter cue by cue."
+      },
+      {
+        "name": "fab-pop",
+        "value": "0.18s ease-out, from opacity 0 / scale(0.85)",
+        "purpose": "Selection button entrance."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "animation and transition: none",
+        "purpose": "prefers-reduced-motion disables all motion."
+      }
+    ],
+    "breakpoints": []
+  },
+  "components": [
+    {
+      "name": "Track Chip",
+      "kind": "chip",
+      "refersTo": "track-chip",
+      "description": "Language track label; the signature of the world.",
+      "html": "<span class=\"ds-track\" data-lang=\"ja\">JA</span> <span class=\"ds-track\" data-lang=\"en\">EN</span> <span class=\"ds-track\" data-lang=\"vi\">VI</span> <span class=\"ds-track\">ZH</span>",
+      "css": ":host{--band:#0e1116;--band-raised:#171b22;--line:#2a313c;--ink:#fff;--ink-2:rgba(255,255,255,.78);--ink-3:#8f98a3;--sub:#f7d44c;--track-ja:#ef6a4c;--track-en:#6cb4ff;--track-vi:#f7d44c;--track-other:#a3acb7;--font:'Be Vietnam Pro','Segoe UI',system-ui,sans-serif}.ds-track{display:inline-block;min-width:26px;text-align:center;font:600 11px/1 var(--font);letter-spacing:.06em;padding:4px 6px;border-radius:3px;color:#111418;background:var(--track-other)}.ds-track[data-lang=ja]{background:var(--track-ja)}.ds-track[data-lang=en]{background:var(--track-en)}.ds-track[data-lang=vi]{background:var(--track-vi)}"
+    },
+    {
+      "name": "Subtitle Popup",
+      "kind": "card",
+      "refersTo": "band-popup",
+      "description": "Translation popup: track bar, dim source line, yellow subtitle line.",
+      "html": "<div class=\"ds-pop\"><div class=\"ds-bar\"><span class=\"ds-track\" data-lang=\"ja\">JA</span><span class=\"ds-arrow\">→</span><span class=\"ds-track\" data-lang=\"vi\">VI</span><span class=\"ds-engine\">Google</span><div class=\"ds-actions\"><button class=\"ds-icon-btn\" aria-label=\"Copy\"><svg viewBox=\"0 0 16 16\"><rect x=\"5\" y=\"5\" width=\"8.5\" height=\"8.5\" rx=\"1.5\"/><path d=\"M10.5 5V3.5A1.5 1.5 0 0 0 9 2H3.5A1.5 1.5 0 0 0 2 3.5V9a1.5 1.5 0 0 0 1.5 1.5H5\"/></svg></button><button class=\"ds-icon-btn\" aria-label=\"Pin\" aria-pressed=\"false\"><svg viewBox=\"0 0 16 16\"><path d=\"M9.5 2.5l4 4-2 1-2.5 2.5.5 3-1 1-3-3-3 3M6 7l1.5-3.5\"/></svg></button><button class=\"ds-icon-btn\" aria-label=\"Close\"><svg viewBox=\"0 0 16 16\"><path d=\"M4 4l8 8M12 4l-8 8\"/></svg></button></div></div><p class=\"ds-src\">今日はいい天気ですね。</p><p class=\"ds-tl\">Hôm nay trời đẹp nhỉ.</p></div>",
+      "css": ":host{--band:#0e1116;--band-raised:#171b22;--line:#2a313c;--ink:#fff;--ink-2:rgba(255,255,255,.78);--ink-3:#8f98a3;--sub:#f7d44c;--track-ja:#ef6a4c;--track-en:#6cb4ff;--track-vi:#f7d44c;--track-other:#a3acb7;--font:'Be Vietnam Pro','Segoe UI',system-ui,sans-serif}.ds-track{display:inline-block;min-width:26px;text-align:center;font:600 11px/1 var(--font);letter-spacing:.06em;padding:4px 6px;border-radius:3px;color:#111418;background:var(--track-other)}.ds-track[data-lang=ja]{background:var(--track-ja)}.ds-track[data-lang=en]{background:var(--track-en)}.ds-track[data-lang=vi]{background:var(--track-vi)}.ds-icon-btn{width:28px;height:28px;display:grid;place-items:center;border:0;border-radius:5px;background:transparent;color:var(--ink-3);cursor:pointer;padding:0}.ds-icon-btn:hover{color:var(--ink);background:rgba(255,255,255,.07)}.ds-icon-btn:focus-visible{outline:2px solid var(--sub);outline-offset:2px}.ds-icon-btn[aria-pressed=true]{color:var(--sub)}.ds-icon-btn svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}.ds-pop{width:420px;font:14px/1.5 var(--font);color:var(--ink);background:var(--band);border-radius:6px;padding:10px 12px 14px 14px;box-shadow:0 8px 24px rgba(0,0,0,.38),0 1px 3px rgba(0,0,0,.3)}.ds-bar{display:flex;align-items:center;gap:6px}.ds-arrow{color:var(--ink-3);font-size:12px}.ds-engine{margin-left:6px;font-size:11px;color:var(--ink-3)}.ds-actions{margin-left:auto;display:flex;gap:2px}.ds-src{margin:10px 0 0;color:var(--ink-2);font-family:'Yu Gothic UI','Meiryo UI',Meiryo,sans-serif}.ds-tl{margin:4px 0 0;font-size:18px;font-weight:600;line-height:1.42;color:var(--sub);text-shadow:0 1px 0 #000,0 0 2px #000}"
+    },
+    {
+      "name": "Icon Button",
+      "kind": "button",
+      "refersTo": "icon-button",
+      "description": "Quiet 28px line-icon action; yellow when pressed.",
+      "html": "<button class=\"ds-icon-btn\" aria-label=\"Copy\"><svg viewBox=\"0 0 16 16\"><rect x=\"5\" y=\"5\" width=\"8.5\" height=\"8.5\" rx=\"1.5\"/><path d=\"M10.5 5V3.5A1.5 1.5 0 0 0 9 2H3.5A1.5 1.5 0 0 0 2 3.5V9a1.5 1.5 0 0 0 1.5 1.5H5\"/></svg></button><button class=\"ds-icon-btn\" aria-label=\"Pin\" aria-pressed=\"true\"><svg viewBox=\"0 0 16 16\"><path d=\"M9.5 2.5l4 4-2 1-2.5 2.5.5 3-1 1-3-3-3 3M6 7l1.5-3.5\"/></svg></button><button class=\"ds-icon-btn\" aria-label=\"Close\"><svg viewBox=\"0 0 16 16\"><path d=\"M4 4l8 8M12 4l-8 8\"/></svg></button>",
+      "css": ":host{--band:#0e1116;--band-raised:#171b22;--line:#2a313c;--ink:#fff;--ink-2:rgba(255,255,255,.78);--ink-3:#8f98a3;--sub:#f7d44c;--track-ja:#ef6a4c;--track-en:#6cb4ff;--track-vi:#f7d44c;--track-other:#a3acb7;--font:'Be Vietnam Pro','Segoe UI',system-ui,sans-serif}.ds-icon-btn{width:28px;height:28px;display:grid;place-items:center;border:0;border-radius:5px;background:transparent;color:var(--ink-3);cursor:pointer;padding:0}.ds-icon-btn:hover{color:var(--ink);background:rgba(255,255,255,.07)}.ds-icon-btn:focus-visible{outline:2px solid var(--sub);outline-offset:2px}.ds-icon-btn[aria-pressed=true]{color:var(--sub)}.ds-icon-btn svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}"
+    },
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The one action that matters (Save, Retry), in subtitle yellow.",
+      "html": "<button class=\"ds-btn-primary\">Lưu cài đặt</button>",
+      "css": ":host{--band:#0e1116;--band-raised:#171b22;--line:#2a313c;--ink:#fff;--ink-2:rgba(255,255,255,.78);--ink-3:#8f98a3;--sub:#f7d44c;--track-ja:#ef6a4c;--track-en:#6cb4ff;--track-vi:#f7d44c;--track-other:#a3acb7;--font:'Be Vietnam Pro','Segoe UI',system-ui,sans-serif}.ds-btn-primary{font:700 14px var(--font);color:var(--band);background:var(--sub);border:0;border-radius:5px;padding:9px 18px;cursor:pointer}.ds-btn-primary:hover{filter:brightness(1.08)}.ds-btn-primary:focus-visible{outline:2px solid var(--sub);outline-offset:2px}.ds-btn-primary:disabled{opacity:.6;cursor:default}"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Secondary action with hairline border.",
+      "html": "<button class=\"ds-ghost\">Xóa key</button>",
+      "css": ":host{--band:#0e1116;--band-raised:#171b22;--line:#2a313c;--ink:#fff;--ink-2:rgba(255,255,255,.78);--ink-3:#8f98a3;--sub:#f7d44c;--track-ja:#ef6a4c;--track-en:#6cb4ff;--track-vi:#f7d44c;--track-other:#a3acb7;--font:'Be Vietnam Pro','Segoe UI',system-ui,sans-serif}.ds-ghost{font:600 13px var(--font);color:var(--ink-2);background:transparent;border:1px solid var(--line);border-radius:5px;padding:8px 12px;cursor:pointer}.ds-ghost:hover{color:var(--ink);border-color:#3a4350}.ds-ghost:focus-visible{outline:2px solid var(--sub);outline-offset:2px}"
+    },
+    {
+      "name": "Text Input",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Raised-band field with hairline border.",
+      "html": "<input class=\"ds-input\" type=\"text\" placeholder=\"claude-opus-5-5\">",
+      "css": ":host{--band:#0e1116;--band-raised:#171b22;--line:#2a313c;--ink:#fff;--ink-2:rgba(255,255,255,.78);--ink-3:#8f98a3;--sub:#f7d44c;--track-ja:#ef6a4c;--track-en:#6cb4ff;--track-vi:#f7d44c;--track-other:#a3acb7;--font:'Be Vietnam Pro','Segoe UI',system-ui,sans-serif}.ds-input{font:14px var(--font);color:var(--ink);background:var(--band-raised);border:1px solid var(--line);border-radius:5px;padding:8px 10px;width:280px}.ds-input:hover{border-color:#3a4350}.ds-input:focus-visible{outline:2px solid var(--sub);outline-offset:2px}.ds-input::placeholder{color:#858e9a}"
+    },
+    {
+      "name": "Keycap",
+      "kind": "custom",
+      "refersTo": "kbd",
+      "description": "Shortcut keys in settings.",
+      "html": "<kbd class=\"ds-kbd\">Ctrl</kbd> <kbd class=\"ds-kbd\">Alt</kbd> <kbd class=\"ds-kbd\">D</kbd>",
+      "css": ":host{--band:#0e1116;--band-raised:#171b22;--line:#2a313c;--ink:#fff;--ink-2:rgba(255,255,255,.78);--ink-3:#8f98a3;--sub:#f7d44c;--track-ja:#ef6a4c;--track-en:#6cb4ff;--track-vi:#f7d44c;--track-other:#a3acb7;--font:'Be Vietnam Pro','Segoe UI',system-ui,sans-serif}.ds-kbd{font:600 12px var(--font);color:var(--ink);background:var(--band-raised);border:1px solid var(--line);border-bottom-width:2px;border-radius:4px;padding:2px 7px}"
+    },
+    {
+      "name": "Selection Button",
+      "kind": "button",
+      "refersTo": "track-chip-vi",
+      "description": "34px band square holding the target track chip; appears beside a mouse selection.",
+      "html": "<button class=\"ds-fab\" aria-label=\"Translate\"><span class=\"ds-track\" data-lang=\"vi\">VI</span></button>",
+      "css": ":host{--band:#0e1116;--band-raised:#171b22;--line:#2a313c;--ink:#fff;--ink-2:rgba(255,255,255,.78);--ink-3:#8f98a3;--sub:#f7d44c;--track-ja:#ef6a4c;--track-en:#6cb4ff;--track-vi:#f7d44c;--track-other:#a3acb7;--font:'Be Vietnam Pro','Segoe UI',system-ui,sans-serif}.ds-track{display:inline-block;min-width:26px;text-align:center;font:600 11px/1 var(--font);letter-spacing:.06em;padding:4px 6px;border-radius:3px;color:#111418;background:var(--track-other)}.ds-track[data-lang=ja]{background:var(--track-ja)}.ds-track[data-lang=en]{background:var(--track-en)}.ds-track[data-lang=vi]{background:var(--track-vi)}.ds-fab{width:34px;height:34px;display:grid;place-items:center;background:var(--band);border:0;border-radius:6px;padding:0;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,.35)}.ds-fab:hover .ds-track{filter:brightness(1.1)}.ds-fab:focus-visible{outline:2px solid var(--sub);outline-offset:2px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Subtitle Track",
+    "overview": "A translation is a subtitle laid under what the user is reading. Every surface is an opaque near-black band floating over someone else's app: the source line sits small in dimmed white, the translation reads in subtitle yellow with a hairline black outline, and languages are named by coloured track chips, the way a fansub labels its tracks. The world refuses the category default of a white card with a language dropdown and a grey translated paragraph.\n\nDensity is compact and glanceable; the popup is read mid-task and dismissed with Esc. There is one look, dark, by design: the band is a subtitle band, not a theme, so there is no light variant. Latin and Vietnamese set in Be Vietnam Pro (bundled, OFL); Japanese falls to the Windows faces Yu Gothic UI and Meiryo through `:lang(ja)`.",
+    "keyCharacteristics": [
+      "Opaque near-black band, 6px corners, soft ambient shadow.",
+      "Translation in subtitle yellow with a 1px black outline shadow; source in 78% white.",
+      "Coloured language track chips are the signature: JA vermilion, EN blue, VI yellow.",
+      "Result lines reveal cue by cue (fade and 3px rise, 80ms stagger).",
+      "Thin-stroke 16px line icons in a quiet muted grey until hovered."
+    ],
+    "rules": [
+      {
+        "name": "The One Voice Rule",
+        "body": "Subtitle yellow is the only accent. It marks the translation and the one action that matters; nothing decorative is yellow.",
+        "section": "colors"
+      },
+      {
+        "name": "The Tracks Name Languages Rule",
+        "body": "Vermilion, blue and grey appear only as language track chips. They never colour text, borders or buttons.",
+        "section": "colors"
+      },
+      {
+        "name": "The Readable Subtitle Rule",
+        "body": "The translation is always the largest weighted text in a sentence result (18px/600) and always carries the outline shadow (`0 1px 0 #000, 0 0 2px #000`); the source above it stays at 14px in dim ink.",
+        "section": "typography"
+      },
+      {
+        "name": "The Floating Band Rule",
+        "body": "Shadows belong to the outer band only, scaled to its size; controls inside it stay flat.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do set every surface on the opaque subtitle band with 6px corners.",
+      "Do put the translation in subtitle yellow at 18px/600 with the black outline shadow.",
+      "Do name languages only with track chips (JA vermilion, EN blue, VI yellow, other grey).",
+      "Do mark Japanese runs with `lang=\"ja\"` so they fall to Yu Gothic UI / Meiryo.",
+      "Do keep icons as 16px inline SVG line icons at 1.7 stroke in `currentColor`."
+    ],
+    "donts": [
+      "Don't add a light theme or a translucent/acrylic band; the band is opaque and dark by design.",
+      "Don't fall back to a white card with a language dropdown and a grey translated paragraph.",
+      "Don't use track colours outside chips, or yellow for decoration.",
+      "Don't shadow controls inside a band."
+    ]
+  }
+}
